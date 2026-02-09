@@ -43,4 +43,15 @@ extension AdaptiveWidgetExtension on Widget {
   }) => FittedBox(fit: fit, alignment: alignment, child: this);
 
   Widget get scrollable => SingleChildScrollView(child: this);
+
+  // Sizing
+  /// Wrap with SizedBox width
+  Widget w(double value) => SizedBox(width: value.w, child: this);
+
+  /// Wrap with SizedBox height
+  Widget h(double value) => SizedBox(height: value.h, child: this);
+
+  /// Wrap with SizedBox size (square)
+  Widget size(double value) =>
+      SizedBox(width: value.w, height: value.w, child: this);
 }

@@ -34,6 +34,13 @@ extension AdaptiveTextWidgetExtension on Text {
       copyWith(style: (style ?? const TextStyle()).copyWith(color: c));
   Text align(TextAlign a) => copyWith(textAlign: a);
 
+  // FontWeight shortcuts
+  Text get bold => fontWeight(FontWeight.bold);
+  Text get semiBold => fontWeight(FontWeight.w600);
+  Text get medium => fontWeight(FontWeight.w500);
+  Text get regular => fontWeight(FontWeight.w400);
+  Text get light => fontWeight(FontWeight.w300);
+
   Text copyWith({
     TextStyle? style,
     TextAlign? textAlign,

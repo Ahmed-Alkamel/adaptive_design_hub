@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import '../core/adaptive_design_hub.dart';
 
 extension AdaptiveNumExtension on num {
@@ -15,4 +16,8 @@ extension AdaptiveNumExtension on num {
 
   // Aliases for common usages
   double get dp => sp;
+
+  // Spacing helpers
+  Widget get verticalSpace => SizedBox(height: h);
+  Widget get horizontalSpace => SizedBox(width: w);
 }

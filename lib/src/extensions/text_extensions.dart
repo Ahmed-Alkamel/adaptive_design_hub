@@ -6,7 +6,7 @@ extension AdaptiveTextStyleExtension on TextStyle {
   TextStyle get sp => copyWith(fontSize: fontSize?.sp);
 
   /// Set generic font size
-  TextStyle size(double s) => copyWith(fontSize: s);
+  TextStyle fontSizeExt(double s) => copyWith(fontSize: s);
 
   /// Adaptive line height
   TextStyle get h => copyWith(height: height?.h);
@@ -22,7 +22,7 @@ extension AdaptiveTextStyleExtension on TextStyle {
   TextStyle get light => copyWith(fontWeight: FontWeight.w300);
 
   // Color shortcuts
-  TextStyle color(Color c) => copyWith(color: c);
+  TextStyle colorExt(Color c) => copyWith(color: c);
 }
 
 extension AdaptiveTextWidgetExtension on Text {

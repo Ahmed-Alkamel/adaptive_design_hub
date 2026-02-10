@@ -31,7 +31,7 @@ class MasterDesignShowcase extends StatelessWidget {
                   child: Icon(
                     Icons.design_services_outlined,
                     size: 60.sp,
-                    color: Colors.white.withOpacity(0.2),
+                    color: Colors.white.withValues(alpha: 0.2),
                   ),
                 ),
               ),

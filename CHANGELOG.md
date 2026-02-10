@@ -1,3 +1,7 @@
+## 0.0.3
+* Added "Usage" section to README.md with detailed code examples.
+* Improved documentation formatting.
+
 ## 0.0.2
 * Added comprehensive API documentation.
 * Added LICENSE file.

@@ -19,6 +19,100 @@ This library simplifies the complexity of supporting multiple devices by offerin
 
 ---
 
+## Usage
+
+### 1. Initialization
+
+Initialize the `AdaptiveDesignHub` in your `main` function or directly in your `MyApp` widget. You should provide the design size used in your design tool (e.g., Figma).
+
+```dart
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // Initialize the hub with your design size (e.g., 375x812)
+    AdaptiveDesignHub().init(
+      designSize: const Size(375, 812),
+      useScreenUtil: true, // Set to false to use the native adapter
+    );
+
+    return MaterialApp(
+      // ...
+      home: const HomePage(),
+    );
+  }
+}
+```
+
+### 2. Responsive Sizing
+
+Use the extension getters `.w`, `.h`, `.r`, and `.sp` to adapt values to the current screen size.
+
+```dart
+Container(
+  width: 100.w,    // Adapts to screen width
+  height: 200.h,   // Adapts to screen height
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(10.r), // Adapts radius
+  ),
+  child: Text(
+    'Responsive Text',
+    style: TextStyle(
+      fontSize: 16.sp, // Adapts font size
+    ),
+  ),
+)
+```
+
+### 3. Adaptive Theme
+
+Define a theme and access it anywhere using `context`.
+
+```dart
+// 1. Setup (in init)
+AdaptiveDesignHub().init(
+  theme: AdaptiveTheme(
+    colors: AdaptiveColors(primary: Colors.deepPurple),
+    typography: AdaptiveTypography(fontFamily: 'Poppins'),
+  ),
+);
+
+// 2. Usage
+Widget build(BuildContext context) {
+  return Container(
+    color: context.adaptiveColors.primary, // Access colors
+    child: Text(
+      'Themed Text',
+      style: context.adaptiveTypography.bodyLarge, // Access typography
+    ),
+  );
+}
+```
+
+### 4. Fluent Extensions
+
+Write cleaner, more readable code with widget and padding extensions.
+
+```dart
+// Traditional Way
+Padding(
+  padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
+  child: Center(
+    child: Text('Hello'),
+  ),
+)
+
+// AdaptiveDesignHub Way
+Text('Hello').center.px(20).py(10)
+```
+
+---
+
 ## Codebase Walkthrough
 
 This section provides a detailed explanation of the library's structure, file by file.

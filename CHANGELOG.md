@@ -1,3 +1,9 @@
+## 0.0.2
+* Added comprehensive API documentation.
+* Added LICENSE file.
+* Updated pubspec.yaml metadata.
+* Code cleanup and lint fixes.
+
 ## 0.0.1
 
 * Initial release of AdaptiveDesignHub.

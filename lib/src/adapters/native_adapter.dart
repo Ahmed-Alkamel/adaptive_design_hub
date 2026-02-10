@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:flutter/material.dart';
+
 import 'responsive_adapter.dart';
 
 class NativeAdapter implements ResponsiveAdapter {

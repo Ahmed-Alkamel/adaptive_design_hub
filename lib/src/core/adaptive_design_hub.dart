@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../adapters/responsive_adapter.dart';
 import '../adapters/screen_util_adapter.dart';
 import '../adapters/native_adapter.dart';

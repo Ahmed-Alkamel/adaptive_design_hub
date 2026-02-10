@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'responsive_adapter.dart';
 
 class NativeAdapter implements ResponsiveAdapter {
+  /// The baseline design size (e.g., 375x812).
   final Size designSize;
 
   // We use the first view's physical size / pixel ratio as a fallback if no context is available
@@ -12,6 +13,7 @@ class NativeAdapter implements ResponsiveAdapter {
     return view.physicalSize / view.devicePixelRatio;
   }
 
+  /// Creates a [NativeAdapter] with the given [designSize].
   NativeAdapter({this.designSize = const Size(375, 812)});
 
   double get _scaleWidth => _screenSize.width / designSize.width;

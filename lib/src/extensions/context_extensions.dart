@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../core/adaptive_design_hub.dart';
 import '../theme/adaptive_theme.dart';
 
+/// Extensions on [BuildContext] for easy access to theme, media query, and adaptive tools.
 extension AdaptiveContextExtension on BuildContext {
   // Theme Shortcuts
 

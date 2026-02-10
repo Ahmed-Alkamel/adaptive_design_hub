@@ -1,9 +1,9 @@
 name: adaptive_design_hub
 description: A comprehensive Flutter library for responsive UI, featuring adaptive theming, easy sizing extensions (.w, .h, .sp), and robust device adaptation tools.
 version: 0.0.1
-homepage: https://github.com/example/adaptive_design_hub
-repository: https://github.com/example/adaptive_design_hub
-issue_tracker: https://github.com/example/adaptive_design_hub/issues
+homepage: https://github.com/Ahmed-Alkamel/adaptive_design_hub
+repository: https://github.com/Ahmed-Alkamel/adaptive_design_hub
+issue_tracker: https://github.com/Ahmed-Alkamel/adaptive_design_hub/issues
 topics:
   - responsive
   - ui

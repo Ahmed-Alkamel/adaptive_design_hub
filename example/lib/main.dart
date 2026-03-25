@@ -7,35 +7,45 @@ import 'package:example/pages/typography_showcase.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  AdaptiveDesignHub().init(
-    useScreenUtil: true,
-    designSize: const Size(375, 812),
-    theme: AdaptiveTheme(
-      colors: AdaptiveColors(primary: Colors.indigo, secondary: Colors.amber),
-    ),
-  );
-
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
-      builder:
-          (context, child) => MaterialApp(
-            title: 'Adaptive Design Hub Example',
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
-              useMaterial3: true,
+      builder: (context, child) {
+        // Initialize the hub here to ensure ScreenUtil is ready
+        AdaptiveDesignHub().init(
+          useScreenUtil: true,
+          designSize: const Size(375, 812),
+          theme: AdaptiveTheme(
+            colors: AdaptiveColors(
+              primary: Colors.indigo,
+              secondary: Colors.amber,
             ),
-            home: const HomePage(),
           ),
+        );
+
+        return MaterialApp(
+          title: 'Adaptive Design Hub Example',
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+            useMaterial3: true,
+          ),
+          home: const HomePage(),
+        );
+      },
     );
   }
 }

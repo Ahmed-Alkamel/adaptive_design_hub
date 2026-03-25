@@ -40,3 +40,32 @@ extension AdaptiveNumExtension on num {
   /// Example: `15.horizontalSpace`
   Widget get horizontalSpace => SizedBox(width: w);
 }
+
+extension ScreenUtilWidgetExtension on num {
+  // Spacing helpers
+
+  // Padding helpers
+  EdgeInsets get paddingAll => EdgeInsets.all(toDouble().w);
+  EdgeInsets get paddingLeft => EdgeInsets.only(left: toDouble().w);
+  EdgeInsets get paddingTop => EdgeInsets.only(top: toDouble().w);
+  EdgeInsets get paddingBottom => EdgeInsets.only(bottom: toDouble().w);
+  EdgeInsetsDirectional get paddingEnd =>
+      EdgeInsetsDirectional.only(end: toDouble().w);
+  EdgeInsetsDirectional get paddingStart =>
+      EdgeInsetsDirectional.only(start: toDouble().w);
+  EdgeInsets get paddingRight => EdgeInsets.only(right: toDouble().w);
+  EdgeInsets get paddingHorizontal =>
+      EdgeInsets.symmetric(horizontal: toDouble().w);
+  EdgeInsets get paddingVertical =>
+      EdgeInsets.symmetric(vertical: toDouble().h);
+  // EdgeInsets paddingOnly({
+  //   required double left,
+  //   required double right,
+  //   required double top,
+  //   required double bottom,
+  // }) => EdgeInsets.only(top: top.h, bottom: bottom, left: left, right: right);
+
+  // BorderRadius helpers
+  BorderRadius get circularBorder => BorderRadius.circular(toDouble().r);
+  Radius get circularRadius => Radius.circular(toDouble().r);
+}

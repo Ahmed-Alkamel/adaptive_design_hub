@@ -16,9 +16,9 @@ class NativeAdapter implements ResponsiveAdapter {
   /// Creates a [NativeAdapter] with the given [designSize].
   NativeAdapter({this.designSize = const Size(375, 812)});
 
-  double get _scaleWidth => _screenSize.width / designSize.width;
-  double get _scaleHeight => _screenSize.height / designSize.height;
-  double get _scaleText => _scaleWidth; // Simplified approach
+  double get _scaleWidth => 1;
+  double get _scaleHeight => 1;
+  double get _scaleText => 1; // Simplified approach
 
   @override
   double setHeight(num height) => height * _scaleHeight;

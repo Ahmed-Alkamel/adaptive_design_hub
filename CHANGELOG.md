@@ -1,3 +1,8 @@
+## 0.0.5
+
+- fix bug in native adapter.
+-
+
 ## 0.0.4
 
 - add new feature to num extations.

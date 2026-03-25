@@ -8,10 +8,10 @@ class NativeAdapter implements ResponsiveAdapter {
 
   // We use the first view's physical size / pixel ratio as a fallback if no context is available
   // This is minimal "no-context" support for native mode.
-  static Size get _screenSize {
-    final view = PlatformDispatcher.instance.views.first;
-    return view.physicalSize / view.devicePixelRatio;
-  }
+  // static Size get _screenSize {
+  //   final view = PlatformDispatcher.instance.views.first;
+  //   return view.physicalSize / view.devicePixelRatio;
+  // }
 
   /// Creates a [NativeAdapter] with the given [designSize].
   NativeAdapter({this.designSize = const Size(375, 812)});
